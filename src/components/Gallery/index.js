@@ -1,4 +1,17 @@
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
 const Gallery = () => {
+  const [gallery, setGallery] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const galleryRef = ref(db, "gallery");
+
+    onValue(galleryRef, (snapshot) => {
+      const data = snapshot.val();
+      setGallery(data);
+    });
+  }, []);
   return (
     <section id="Gallery">
       <div className="container">
@@ -34,8 +47,7 @@ const Gallery = () => {
                   <h2>Twitter API Data Analysis</h2>
                 </a>
                 <p>
-                  Loaded and queried Twitter API data consisting of Elon Musk’s
-                  most recent Tweets from 2015 to 2022.
+                  {gallery.twitter}
                 </p>
               </div>
             </div>
@@ -66,8 +78,7 @@ const Gallery = () => {
                   <h2>Spotify Data Analysis</h2>
                 </a>
                 <p>
-                  Applied statistical methods to Spotify API data to explore
-                  factors influencing a song’s popularity.
+                  {gallery.spotify}
                 </p>
               </div>
             </div>
@@ -98,9 +109,7 @@ const Gallery = () => {
                   <h2>Statistical Analysis and Modeling</h2>
                 </a>
                 <p>
-                  Explored data, fit linear regression models, applied
-                  predictive modeling techniques, and deployed tools to assess
-                  the validity of models.
+                 {gallery.statistical}
                 </p>
               </div>
             </div>
@@ -131,9 +140,7 @@ const Gallery = () => {
                   <h2>Mathematical Dynamics of Neurons</h2>
                 </a>
                 <p>
-                  Studied neurons composed of excitatory and inhibitory
-                  subgroups, which each exhibited various oscillation patterns
-                  when fired.
+                  {gallery.mathematical}
                 </p>
               </div>
             </div>

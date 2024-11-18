@@ -271,6 +271,7 @@ span.title {
   color: #000 !important;
   text-shadow: 1px 1px 1px #fff;
   font-size: 8pt;
+
 }
 #Home {
   background-image: url(https://hluebbering.github.io/home/gallery/gallery/icon-11.jpg) !important;
@@ -280,7 +281,6 @@ span.title {
   background-image: url(https://hbr.org/resources/images/article_assets/2008/01/04Oct12_Davenport_data-scientist.jpg) !important;
   background-position: 0 20% !important;
   background-size: 100% !important;
-  min-height: 310px !important;
   background-image: url(https://images.unsplash.com/photo-1468908627957-7783f0c42edb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2532&q=80) !important;
 }
 h1.display-3 {
