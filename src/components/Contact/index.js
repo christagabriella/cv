@@ -12,19 +12,19 @@ const Contact = () => {
             <div className="d-flex justify-content-center">
               <FaPhone className="contact-logo h1 text-accent-4" />
             </div>
-            <h5 className="lh-lg text-center">hluebbering.github.io</h5>
+            <h5 className="lh-lg text-center">christagabriella</h5>
           </div>
           <div className="col-12 col-md-4 px-5 py-2 py-md-4">
             <div className="d-flex justify-content-center">
               <FaAt className="contact-logo h1 text-accent-4" />
             </div>
-            <h5 className="lh-lg text-center">luebhr@gmail.com</h5>
+            <h5 className="lh-lg text-center">christagabriella@gmail.com</h5>
           </div>
           <div className="col-12 col-md-4 px-5 py-2 py-md-4">
             <div className="d-flex justify-content-center">
               <FaMapMarkerAlt className="contact-logo h1 text-accent-4" />
             </div>
-            <h5 className="lh-lg text-center">Seattle, Washington</h5>
+            <h5 className="lh-lg text-center">Minahasa Utara</h5>
           </div>
         </div>
       </div>

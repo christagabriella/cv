@@ -1,6 +1,18 @@
 import { FaHome, FaPhone } from "react-icons/fa";
-
+import { getDatabase, ref, onValue } from "firebase/database";
+import { useEffect, useState } from "react";
 const Header = () => {
+  const [header, setHeader] = useState({});
+
+  useEffect(() => {
+    const db = getDatabase();
+    const headerRef = ref(db, "header");
+
+    onValue(headerRef, (snapshot) => {
+      const data = snapshot.val();
+      setHeader(data);
+    });
+  }, []);
   return (
     <div className="App">
       <meta charSet="utf-8" />
@@ -66,8 +78,8 @@ const Header = () => {
               <div className="headit">
                 <div className="avatar">
                   <img
-                    src="https://assets.codepen.io/4927073/IMG_5138_edited.jpg"
-                    alt="Christa Tumbel"
+                    src={`data:image/jpeg;base64, ${header.image}`}
+                    alt="Foto Profil"
                   />
                   <button className="learn-more">Resume</button>
                 </div>

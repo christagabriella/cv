@@ -138,6 +138,17 @@ const Gallery = () => {
               </div>
             </div>
           </div>
+          <div className="skills-section">
+            <h2>Skills</h2>
+            <ul>
+              <li>Data Analysis</li>
+              <li>Machine Learning</li>
+              <li>Web Development</li>
+              <li>API Integration</li>
+              <li>Predictive Modeling</li>
+              <li>Statistical Analysis</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
